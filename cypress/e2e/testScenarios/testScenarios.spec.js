@@ -1,6 +1,6 @@
 import searchItemsPOM from "../pageObject/searchItemsPOM"
 
-describe('test to validate search filter', function () {
+describe('Test to validate search filter', function () {
     this.beforeEach(function () {
         searchItemsPOM.homePage();
     })

@@ -25,7 +25,7 @@ describe('Test to validate search filter', function () {
         searchItemsPOM.getValidationMessage(searchItemsPOM.editIntroducedField).should('contain.text', 'java.time.format.DateTimeParseException');
     })
 
-    it('try to add a date of introduction greater than the date of Discontinued', () => {
+    it('Try to add a date of introduction greater than the date of Discontinued', () => {
         searchItemsPOM.searchBar.type('Commodore 64');
         searchItemsPOM.filterButton.click();
         searchItemsPOM.selectElmentByName('Commodore 64');
@@ -35,7 +35,7 @@ describe('Test to validate search filter', function () {
         searchItemsPOM.getValidationMessage(searchItemsPOM.editDiscontinuedField).should('contain.text', 'Discontinued date is before introduction date');
     })
 
-    it('validate that the name and date of introduction of a laptop can be edited correctly', () => {
+    it('Validate that the name and date of introduction of a laptop can be edited correctly', () => {
         searchItemsPOM.searchBar.type('Commodore 64');
         searchItemsPOM.filterButton.click();
         searchItemsPOM.selectElmentByName('Commodore 64');
@@ -60,7 +60,7 @@ describe('Test to validate search filter', function () {
         searchItemsPOM.table.should('be.visible');
     })
 
-    it('validate that a new computer can be added', () => {
+    it('Validate that a new computer can be added', () => {
         searchItemsPOM.addButton.click();
         searchItemsPOM.editNameField.type('Android');
         searchItemsPOM.editIntroducedField.type('2008-08-01');
